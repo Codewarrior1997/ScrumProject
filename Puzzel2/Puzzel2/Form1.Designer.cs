@@ -42,7 +42,6 @@
             this.picOranje = new System.Windows.Forms.PictureBox();
             this.lblOpdracht = new System.Windows.Forms.Label();
             this.lblStappen = new System.Windows.Forms.Label();
-            this.lblCorrect = new System.Windows.Forms.Label();
             this.btnTest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picRood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBlauw)).BeginInit();
@@ -214,26 +213,13 @@
             this.lblStappen.TabIndex = 13;
             this.lblStappen.Text = "Stap 1";
             // 
-            // lblCorrect
-            // 
-            this.lblCorrect.AutoSize = true;
-            this.lblCorrect.BackColor = System.Drawing.Color.Transparent;
-            this.lblCorrect.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.lblCorrect.ForeColor = System.Drawing.Color.Lime;
-            this.lblCorrect.Location = new System.Drawing.Point(639, 217);
-            this.lblCorrect.Name = "lblCorrect";
-            this.lblCorrect.Size = new System.Drawing.Size(149, 29);
-            this.lblCorrect.TabIndex = 14;
-            this.lblCorrect.Text = "Niet correct.";
-            this.lblCorrect.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // btnTest
             // 
             this.btnTest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnTest.FlatAppearance.BorderSize = 0;
             this.btnTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTest.ForeColor = System.Drawing.Color.Lime;
-            this.btnTest.Location = new System.Drawing.Point(683, 173);
+            this.btnTest.Location = new System.Drawing.Point(714, 263);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(105, 41);
             this.btnTest.TabIndex = 15;
@@ -247,9 +233,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Puzzel2.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(815, 316);
+            this.ClientSize = new System.Drawing.Size(947, 316);
             this.Controls.Add(this.btnTest);
-            this.Controls.Add(this.lblCorrect);
             this.Controls.Add(this.lblStappen);
             this.Controls.Add(this.lblOpdracht);
             this.Controls.Add(this.picOranje);
@@ -294,7 +279,6 @@
         private System.Windows.Forms.PictureBox picOranje;
         private System.Windows.Forms.Label lblOpdracht;
         private System.Windows.Forms.Label lblStappen;
-        private System.Windows.Forms.Label lblCorrect;
         private System.Windows.Forms.Button btnTest;
     }
 }
