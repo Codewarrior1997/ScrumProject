@@ -83,5 +83,26 @@
   <ItemGroup>
     <None Include="Resources\background.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chemicaltubeRood.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chemicaltubeRood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chemicaltubeBlauw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chemicaltubeGroen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chemicaltubeGeel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chemicaltubePaars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chemicaltubeOranje.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
