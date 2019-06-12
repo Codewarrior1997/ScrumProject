@@ -65,6 +65,16 @@ namespace Puzzel2
             }
             if (lblStappen.Text == "Stap 4")
             {
+                if (chkRood.Checked && !chkBlauw.Checked && !chkGroen.Checked && !chkGeel.Checked && !chkPaars.Checked && !chkOranje.Checked)
+                {
+                    lblCorrect.Text = "Correct!";
+                    lblStappen.Text = "Stap 5";
+                    lblOpdracht.Text = "Welke kleur is het meest voorgekomen?";
+                }
+                else
+                {
+                    lblCorrect.Text = "Niet correct.";
+                }
 
             }
         }

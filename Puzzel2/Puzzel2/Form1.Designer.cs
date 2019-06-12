@@ -246,7 +246,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Puzzel2.Properties.Resources.background;
-            this.ClientSize = new System.Drawing.Size(815, 318);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(815, 316);
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.lblCorrect);
             this.Controls.Add(this.lblStappen);
