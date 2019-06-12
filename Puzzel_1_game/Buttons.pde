@@ -12,19 +12,23 @@ class Button {
   }
 
   public void drawCircle() {
+    pushStyle();
+    fill(c);
+    
     if (mousePressed)
     {
       if (mouseX > (circleX-circleDim/2) && mouseY > (circleY-circleDim/2) && mouseX < (circleX + circleDim/2) && mouseY < (circleY + circleDim/2))
       {
         fill(64);
       }
-    } else
-    {
-      fill(c);
     }
+    
     noStroke();
     circle(circleX, circleY, circleDim);
+    
+    popStyle();
   }
+
 
   public int getCircleX() {
     return circleX;
@@ -43,7 +47,7 @@ class Button {
   }
 
   public boolean getPressed() {
-    if (mouseX > (circleX-circleDim/2) && mouseY > (circleY-circleDim/2) && mouseX < (circleX + circleDim/2) && mouseY < (circleY + circleDim/2))
+    if (mousePressed && mouseX > (circleX-circleDim/2) && mouseY > (circleY-circleDim/2) && mouseX < (circleX + circleDim/2) && mouseY < (circleY + circleDim/2))
       {
         return true;
       }
