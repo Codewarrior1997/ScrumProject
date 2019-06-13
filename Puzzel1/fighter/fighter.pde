@@ -1,41 +1,44 @@
 ArrayList<Bullet> bullets;
+PImage img;
 
 void setup()
 {
-  size(960, 640);
+  size(1280, 720);
   bullets = new ArrayList<Bullet>();
   frameRate(60);
+  img = loadImage("nuclear_background.png");
 }
 
 Fighter fighter = new Fighter();
 
 void draw()
 {
-  background(100, 200, 80);
+  background(img);
+
   fighter.drawFighter();
 }
 
 class Fighter
 {
   float xPos, yPos;
-  
+
   public Fighter()
   {
     xPos = 50;
     yPos = 50;
   }
-  
+
   public void drawFighter()
   {
     fill(255);
     rect(xPos, yPos, 20, 20);
-    
+
     for (Bullet b : bullets)
     {
       b.drawBullet();
     }
-    
-    if(keyPressed)
+
+    if (keyPressed)
     {
       if (key == 'w' || key == 'W')
       {
@@ -59,11 +62,10 @@ class Fighter
       }
     }
   }
-  
+
   public void fireGun()
   {
     bullets.add(new Bullet(xPos, yPos));
-    
   }
 }
 
@@ -71,7 +73,7 @@ class Bullet
 {
   float xPos;
   float yPos;
-  
+
   public Bullet(float xPos, float yPos)
   {
     this.xPos = xPos + 7;
