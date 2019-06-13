@@ -1,14 +1,12 @@
 ArrayList<Bullet> bullets;
 PImage img;
-Startscherm startscherm;
 
 void setup()
 {
   size(1280, 720);
   bullets = new ArrayList<Bullet>();
-  frameRate(60);
+  framesRate(60);
   img = loadImage("nuclear_background.png");
-  startscherm = new Startscherm();
 }
 
 Fighter fighter = new Fighter();
@@ -16,7 +14,6 @@ Fighter fighter = new Fighter();
 void draw()
 {
   background(img);
-  startscherm.drawMenu();
 
   fighter.drawFighter();
 }
