@@ -43,6 +43,7 @@
             this.lblOpdracht = new System.Windows.Forms.Label();
             this.lblStappen = new System.Windows.Forms.Label();
             this.btnTest = new System.Windows.Forms.Button();
+            this.lblUitkomst = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picRood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBlauw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGroen)).BeginInit();
@@ -219,13 +220,24 @@
             this.btnTest.FlatAppearance.BorderSize = 0;
             this.btnTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTest.ForeColor = System.Drawing.Color.Lime;
-            this.btnTest.Location = new System.Drawing.Point(714, 263);
+            this.btnTest.Location = new System.Drawing.Point(683, 210);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(105, 41);
             this.btnTest.TabIndex = 15;
             this.btnTest.Text = "Test!";
             this.btnTest.UseVisualStyleBackColor = false;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            // 
+            // lblUitkomst
+            // 
+            this.lblUitkomst.AutoSize = true;
+            this.lblUitkomst.BackColor = System.Drawing.Color.Transparent;
+            this.lblUitkomst.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lblUitkomst.ForeColor = System.Drawing.Color.Lime;
+            this.lblUitkomst.Location = new System.Drawing.Point(627, 254);
+            this.lblUitkomst.Name = "lblUitkomst";
+            this.lblUitkomst.Size = new System.Drawing.Size(0, 29);
+            this.lblUitkomst.TabIndex = 16;
             // 
             // Form1
             // 
@@ -234,6 +246,7 @@
             this.BackgroundImage = global::Puzzel2.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(947, 316);
+            this.Controls.Add(this.lblUitkomst);
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.lblStappen);
             this.Controls.Add(this.lblOpdracht);
@@ -280,6 +293,7 @@
         private System.Windows.Forms.Label lblOpdracht;
         private System.Windows.Forms.Label lblStappen;
         private System.Windows.Forms.Button btnTest;
+        private System.Windows.Forms.Label lblUitkomst;
     }
 }
 
