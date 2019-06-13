@@ -61,7 +61,7 @@ namespace Puzzel2
                     lblStappen.Text = "Stap 4";
                     lblOpdracht.Text = "Welke kleur is niet voorgekomen?";
                 }
-             
+
             }
             if (lblStappen.Text == "Stap 4")
             {
@@ -80,7 +80,7 @@ namespace Puzzel2
                 {
                     chkGroen.Checked = false;
                     lblStappen.Text = "...";
-                    lblOpdracht.Text = "832";
+                    lblOpdracht.Text = "HCB";
                     btnTest.Hide(); chkBlauw.Hide(); chkGeel.Hide();
                     chkGroen.Hide(); chkOranje.Hide(); chkPaars.Hide();
                     chkRood.Hide(); picBlauw.Hide(); picGeel.Hide();
