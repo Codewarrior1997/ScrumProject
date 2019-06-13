@@ -1,7 +1,9 @@
+//alle eigenschappen voor een button met kleur
 class Button {
   private int circleX, circleY, circleDim;
   private color c;
 
+//maakt een button aan met X en Y coördinaten, bepaalde grootte en een kleur
   public Button(int X, int Y, int grootte, color c) {
     circleDim = grootte;
 
@@ -11,6 +13,7 @@ class Button {
     this.c = c;
   }
 
+//tekent een klikbare cirkel
   public void drawCircle() {
     pushStyle();
     fill(c);
@@ -46,6 +49,7 @@ class Button {
     return c;
   }
 
+//geeft een "true" terug als hij geklikt wordt. Anders is het false..
   public boolean getPressed() {
     if (mousePressed && mouseX > (circleX-circleDim/2) && mouseY > (circleY-circleDim/2) && mouseX < (circleX + circleDim/2) && mouseY < (circleY + circleDim/2))
       {
