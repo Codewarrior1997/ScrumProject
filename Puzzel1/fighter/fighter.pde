@@ -2,6 +2,9 @@ ArrayList<Bullet> bullets;
 PImage img;
 Startscherm startscherm;
 
+Boolean down = false;
+String state;
+
 void setup()
 {
   size(1280, 720);
@@ -15,10 +18,16 @@ Fighter fighter = new Fighter();
 
 void draw()
 {
-  background(img);
-  startscherm.drawMenu();
-
-  fighter.drawFighter();
+  
+  if (state == "start") {
+    background(img);
+    fighter.drawFighter();
+  } else if (state == "exit")
+  {
+    exit();
+  } else {
+    startscherm.drawMenu();
+  }
 }
 
 class Fighter
@@ -86,5 +95,18 @@ class Bullet
   {
     yPos -= 7;
     rect(xPos, yPos, 6, 6);
+  }
+}
+
+void mousePressed()
+{
+  if (startscherm.startOrExit() == "start") {
+    if (down == false)
+      state = "start";
+    down = true;
+  } else if (startscherm.startOrExit() == "exit") {
+    if (down == false) {
+      state = "exit";
+    }
   }
 }
