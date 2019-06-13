@@ -19,7 +19,7 @@ namespace Puzzel2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void btnTest_Click(object sender, EventArgs e)
@@ -81,6 +81,11 @@ namespace Puzzel2
                     chkGroen.Checked = false;
                     lblStappen.Text = "...";
                     lblOpdracht.Text = "832";
+                    btnTest.Hide(); chkBlauw.Hide(); chkGeel.Hide();
+                    chkGroen.Hide(); chkOranje.Hide(); chkPaars.Hide();
+                    chkRood.Hide(); picBlauw.Hide(); picGeel.Hide();
+                    picGroen.Hide(); picOranje.Hide(); picPaars.Hide();
+                    picRood.Hide();
                 }
             }
         }
