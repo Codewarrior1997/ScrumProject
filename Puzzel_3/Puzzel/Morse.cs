@@ -8,16 +8,20 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Puzzel
 {
     
     public partial class Morse : Form
     {
+       
 
         public Morse()
         {
             InitializeComponent();
+
+            
         }
 
         private void Morse_Load(object sender, EventArgs e)
@@ -32,9 +36,7 @@ namespace Puzzel
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string codeinvoer1 = txtCodeInvoer1.Text;
-            string codeinvoer2 = txtCodeInvoer2.Text;
-            string codeinvoer3 = txtCodeInvoer3.Text;
+            
             string Enter = txtEnter.Text;
 
             if (txtEnter.Text == "839")
@@ -48,16 +50,42 @@ namespace Puzzel
 
 
         }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
-             void playSimpleSound()
-            {
-                SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\GEBRUIKER\Downloads\morsecode.wav");
-                simpleSound.Play();
-            }
+            List<byte> soundBytes = new List<byte>(File.ReadAllBytes("morse.wav"));
+            MemoryStream memoryStream = new MemoryStream(soundBytes.GetRange(0, soundBytes.Count / 1).ToArray(), true);
+            SoundPlayer player = new SoundPlayer(memoryStream);
+            
+                player.Stream.Position = 0;
+                player.Load();
+                player.PlaySync();
+            
 
-            playSimpleSound();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            List<byte> soundBytes = new List<byte>(File.ReadAllBytes("morse2.wav"));
+            MemoryStream memoryStream = new MemoryStream(soundBytes.GetRange(0, soundBytes.Count / 1).ToArray(), true);
+            SoundPlayer player = new SoundPlayer(memoryStream);
+
+            player.Stream.Position = 0;
+            player.Load();
+            player.PlaySync();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            List<byte> soundBytes = new List<byte>(File.ReadAllBytes("morse3.wav"));
+            MemoryStream memoryStream = new MemoryStream(soundBytes.GetRange(0, soundBytes.Count / 1).ToArray(), true);
+            SoundPlayer player = new SoundPlayer(memoryStream);
+
+            player.Stream.Position = 0;
+            player.Load();
+            player.PlaySync();
         }
     }
 }
