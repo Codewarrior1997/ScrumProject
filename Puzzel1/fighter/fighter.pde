@@ -1,6 +1,7 @@
 ArrayList<Bullet> bullets;
 PImage img;
 Startscherm startscherm;
+AtomicWaste waste1;
 
 Boolean down = false;
 String state;
@@ -12,16 +13,18 @@ void setup()
   frameRate(60);
   img = loadImage("nuclear_background.png");
   startscherm = new Startscherm();
+  waste1 = new AtomicWaste(30, 300);
 }
 
 Fighter fighter = new Fighter();
 
 void draw()
 {
-  
+
   if (state == "start") {
     background(img);
     fighter.drawFighter();
+    waste1.drawAtomicWaste();
   } else if (state == "exit")
   {
     exit();
@@ -42,8 +45,10 @@ class Fighter
 
   public void drawFighter()
   {
-    fill(255);
+    pushStyle();
+    fill(255, 0, 0);
     rect(xPos, yPos, 20, 20);
+    popStyle();
 
     for (Bullet b : bullets)
     {
@@ -78,6 +83,14 @@ class Fighter
   public void fireGun()
   {
     bullets.add(new Bullet(xPos, yPos));
+  }
+
+  float getXPos() {
+    return xPos;
+  }
+  
+  float getYPos() {
+    return yPos;
   }
 }
 
