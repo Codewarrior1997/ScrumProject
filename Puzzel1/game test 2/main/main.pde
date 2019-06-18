@@ -1,23 +1,26 @@
 void setup()
 {
-  size(1920, 1080);
-  frameRate(100);
+  noStroke();
+  size(1280, 720);
+  frameRate(60);
 }
 
 ArrayList<Enemy> enemies = new ArrayList<Enemy>();
+ArrayList<Item> items = new ArrayList<Item>();
 
 Player player = new Player();
 
+public int level = 1;
 void draw()
 {
   background(255);
-  
+
   player.move();
   player.display();
-  
-  
+
+
   //for (int amount = 0; amount < 10; amount++)
-  if(enemies.size() < 35)
+  if (enemies.size() < 35)
   {
     if (random(100) > 95)
     {
@@ -26,11 +29,26 @@ void draw()
   }
   for (Enemy enemy : enemies)
   {
-    enemy.lifeTime++;
     enemy.display();
     enemy.decideMovement();
     enemy.bounce();
-    enemy.checkCollision();
+    enemy.checkEnemyPlayerCollision();
+  }
+
+  // Spawn radioactive drops  
+  if (level == 1)
+  {
+    if (items.size() < 1)
+    {
+      if (random(100) > 95)
+      {
+        items.add(new Item());
+      }
+    }
+  }
+  for (Item item : items)
+  {
+    item.drawItem();
   }
   //for (int i = enemies.size() - 1; i >= 0; i--)
   //{

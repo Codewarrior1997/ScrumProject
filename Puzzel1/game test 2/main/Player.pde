@@ -1,14 +1,18 @@
 class Player
 {
-  public PVector location;
+  // Stores the location and the speed of the player
+  PVector location;
   PVector velocity;
 
+  // Constructor
   Player()
   {
+    // Sets the default location of the player
     location = new PVector(300, 300);
     velocity = new PVector(0, 0);
   }
 
+  // Player controls with WASD keys
   void move()
   {
     location.add(velocity);
@@ -41,8 +45,13 @@ class Player
       }
     }
   }
+  
   void display()
   {
+    // Draw the rectangle at the player position
+    pushStyle();
+    fill(0, 0, 0);
     rect(location.x, location.y, 30, 30);
+    popStyle();
   }
 }
