@@ -18,7 +18,7 @@ Fighter fighter = new Fighter();
 
 void draw()
 {
-  
+
   if (state == "start") {
     background(img);
     fighter.drawFighter();
@@ -42,8 +42,10 @@ class Fighter
 
   public void drawFighter()
   {
-    fill(255);
+    pushStyle();
+    fill(255, 0, 0);
     rect(xPos, yPos, 20, 20);
+    popStyle();
 
     for (Bullet b : bullets)
     {
@@ -78,6 +80,14 @@ class Fighter
   public void fireGun()
   {
     bullets.add(new Bullet(xPos, yPos));
+  }
+
+  float getXPos() {
+    return xPos;
+  }
+  
+  float getYPos() {
+    return yPos;
   }
 }
 
