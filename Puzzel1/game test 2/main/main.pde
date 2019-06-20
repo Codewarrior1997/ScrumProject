@@ -81,7 +81,7 @@ void draw()
       text("GAME CLEAR", width / 2 - 30, height / 2);
       text("FINAL SCORE:", width / 2 - 30, height / 2 + 30);
       text(finalScore, width / 2 - 30, height / 2 + 70);
-      text("2-12-25-1-20", width / 2 - 50, height / 2 + 110);
+      text("2-12-25-1-20", width / 2 - 50, height -70);
       popStyle();
 
 
@@ -149,7 +149,7 @@ void draw()
     for (Enemy enemy : enemies)
     {
       enemy.display();
-      //enemy.decideMovement();
+      enemy.decideMovement();
       enemy.bounce();
 
       enemy.checkEnemyPlayerCollision();
