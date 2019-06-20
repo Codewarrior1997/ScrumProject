@@ -77,6 +77,7 @@ void draw()
       // once deciphered it reads "blyad", which is the password needed to enter the next puzzle
       pushStyle();
       fill(255);
+      textSize(30);
       text("GAME CLEAR", width / 2 - 30, height / 2);
       text("FINAL SCORE:", width / 2 - 30, height / 2 + 30);
       text(finalScore, width / 2 - 30, height / 2 + 70);
@@ -148,7 +149,7 @@ void draw()
     for (Enemy enemy : enemies)
     {
       enemy.display();
-      enemy.decideMovement();
+      //enemy.decideMovement();
       enemy.bounce();
 
       enemy.checkEnemyPlayerCollision();
