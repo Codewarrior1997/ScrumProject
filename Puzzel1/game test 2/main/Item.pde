@@ -1,11 +1,8 @@
-// [# Under construction #]
-
-
-
 class Item
 {
   PVector location;
-  int colorR, colorG, colorB;
+  int colorR, colorG, colorB, alpha;
+  boolean allowPickUp = true;
 
   Item()
   {
@@ -13,24 +10,43 @@ class Item
     colorR = 0;
     colorG = 255;
     colorB = 0;
+    alpha = 255;
   }
 
   void CheckItemPlayerCollision()
   {
-    if (player.location.x + 30 > this.location.x && player.location.x < this.location.x + 20 && player.location.y + 30 > this.location.y && player.location.y < this.location.y + 20)
+    if (allowPickUp)
     {
-      
-      colorR = 255;
-      colorG = 255;
-      colorB = 255;
+      if (player.location.x + 30 > this.location.x && player.location.x < this.location.x + 20 && player.location.y + 30 > this.location.y && player.location.y < this.location.y + 20)
+      {
+        score += 10;
+        pickedUp++;
+        colorR = 255;
+        colorG = 255;
+        colorB = 255;
+        alpha = 0;
+
+        itemsSpawned--;
+        allowPickUp = false;
+      }
     }
   }
 
   void drawItem()
   {
-    //pushStyle();
-    fill(colorR, colorG, colorB);
+    if (allowPickUp)
+    {
+    pushStyle();
+    fill(colorR, colorG, colorB, 255);
     rect(this.location.x, this.location.y, 20, 20);
-    //popStyle();
+    popStyle();
+    }
+    else
+    {
+    pushStyle();
+    noFill();
+    rect(this.location.x, this.location.y, 20, 20);
+    popStyle();
+    }
   }
 }

@@ -54,4 +54,24 @@ class Player
     rect(location.x, location.y, 30, 30);
     popStyle();
   }
+  
+  void wrapAround()
+  {
+    if (player.location.x > width + 1)
+    {
+      player.location.x = 0;
+    }
+    if (player.location.x < 0)
+    {
+      player.location.x = width;
+    }
+    if (player.location.y > height + 1)
+    {
+      player.location.y = 0;
+    }
+    if (player.location.y < 0)
+    {
+      player.location.y = height +1;
+    }
+  }
 }
