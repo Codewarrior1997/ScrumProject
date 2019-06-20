@@ -34,9 +34,19 @@ class Item
 
   void drawItem()
   {
-    //pushStyle();
-    fill(colorR, colorG, colorB, alpha);
+    if (allowPickUp)
+    {
+    pushStyle();
+    fill(colorR, colorG, colorB, 255);
     rect(this.location.x, this.location.y, 20, 20);
-    //popStyle();
+    popStyle();
+    }
+    else
+    {
+    pushStyle();
+    noFill();
+    rect(this.location.x, this.location.y, 20, 20);
+    popStyle();
+    }
   }
 }

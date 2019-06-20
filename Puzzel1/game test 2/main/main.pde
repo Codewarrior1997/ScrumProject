@@ -76,7 +76,7 @@ void draw()
       // represented by a number which corresponds to that letter's position in the alphabet.
       // once deciphered it reads "blyad", which is the password needed to enter the next puzzle
       pushStyle();
-      fill(0);
+      fill(255);
       text("GAME CLEAR", width / 2 - 30, height / 2);
       text("FINAL SCORE:", width / 2 - 30, height / 2 + 30);
       text(finalScore, width / 2 - 30, height / 2 + 70);
@@ -163,13 +163,13 @@ void draw()
     }
 
     pushStyle();
-    fill(0);
-    text("Points: " + score, 10, 30);
-    text("Level:" + level, 10, 70);
-    text("Deaths:" + deaths, 10, 110);
-    text(minutes + ":" + seconds, width - 80, 30);
+    fill(255);
+    textSize(30);
+    text("Points: " + score, 80, 30);
+    text("Level: " + level, 80, 70);
+    text("Deaths:" + deaths, 80, 110);
+    text(minutes + ":" + seconds, width - 60, 30);
     popStyle();
-
 
     //for (int i = enemies.size() - 1; i >= 0; i--)
     //{
