@@ -80,7 +80,7 @@ namespace Puzzel2
                 {
                     chkGroen.Checked = false;
                     lblStappen.Text = "...";
-                    lblOpdracht.Text = "HCB";
+                    lblOpdracht.Text = "";
                     btnTest.Hide(); chkBlauw.Hide(); chkGeel.Hide();
                     chkGroen.Hide(); chkOranje.Hide(); chkPaars.Hide();
                     chkRood.Hide(); picBlauw.Hide(); picGeel.Hide();
