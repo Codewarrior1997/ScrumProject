@@ -1,0 +1,17 @@
+*******************DATABASE********************************************
+
+database: dwerner_escapeRoomTsjernobyl
+
+gebruiker: dwerner_teamTsjerno
+
+wachtwoord: Tsjernobyl2019
+
+*******************WEBSITE********************************************
+
+titel: EscapeTsjernobyl!
+
+gebruikersnaam: TeamTsjerno
+
+wachtwoord: nuclearfun2019!
+
+email: david.werner@student.graafschapcollege.nl
